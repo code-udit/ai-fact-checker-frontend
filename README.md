@@ -1,36 +1,141 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🎨 AI Fact Checker Frontend
 
-## Getting Started
+The AI Fact Checker frontend is a modern web application built to analyze text or URLs and determine whether the content is True, Misleading, or False.
 
-First, run the development server:
+It provides:
 
-```bash
+- A clean and intuitive UI
+- Real-time analysis results
+- Visual trust score representation
+- Detailed claim-by-claim breakdown
+- Detection of manipulation patterns like clickbait, fear, and exaggeration
+
+---
+
+🎯 Key Features
+
+- Text & URL Input
+  Users can paste content or provide a URL for analysis.
+
+- AI-Based Verdict System
+  Displays verdict (True / False / Misleading) with a trust score.
+
+- Claims Analysis
+  Breaks content into individual claims and explains each verdict.
+
+- Pattern Detection
+  Identifies manipulation techniques:
+  
+  - Clickbait
+  - Fear-based language
+  - Exaggeration
+
+- Highlighted Text
+  Important phrases are visually highlighted for quick understanding.
+
+- Clean UI & UX
+  
+  - Minimal design (non-AI-looking interface)
+  - Smooth transitions
+  - Responsive layout
+
+---
+
+🧱 Tech Stack
+
+- Framework: Next.js (App Router)
+- Language: TypeScript
+- Styling: Tailwind CSS
+- HTTP Client: Axios
+- UI Components: React Circular Progressbar
+
+---
+
+📂 Project Structure
+
+app/
+ ├── page.tsx
+
+components/
+ ├── ResultCard.tsx
+ ├── ClaimsList.tsx
+ ├── PatternsList.tsx
+ ├── HighlightedText.tsx
+
+services/
+ ├── api.ts
+
+types/
+ ├── index.ts
+
+---
+
+⚙️ Setup Instructions
+
+1. Clone the repository
+
+git clone <repo-url>
+cd <project-folder>
+
+2. Install dependencies
+
+npm install
+
+3. Run the development server
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open in browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+🔗 Backend Integration
 
-To learn more about Next.js, take a look at the following resources:
+The frontend connects to a FastAPI backend:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+http://127.0.0.1:8000/api/analyze
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Make sure the backend server is running before testing.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🧠 How It Works
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. User inputs text or URL
+2. Request is sent to backend API
+3. Backend processes:
+   - Claim extraction
+   - LLM-based verification
+   - Pattern detection
+4. Frontend displays:
+   - Verdict + score
+   - Claims analysis
+   - Detected patterns
+   - Highlighted content
+
+---
+
+💡 Highlights of the Project
+
+- Combines AI + rule-based detection (hybrid system)
+- Handles false positives using context-aware logic
+- Designed with real-world misinformation scenarios
+- Clean modular architecture for scalability
+
+---
+
+📌 Future Improvements
+
+- Dark/Light theme toggle
+- Save analysis history
+- Export reports (PDF)
+- Real-time news verification
+
+---
+
+✅ Conclusion
+
+This frontend focuses on delivering a simple, fast, and visually clear fact-checking experience, making complex AI analysis easy to understand for users.
+
