@@ -109,7 +109,7 @@ export default function Home() {
               <input
                 autoComplete="off"
                 type="text"
-                placeholder="Or paste article URL..."
+                placeholder="Paste URL here..."
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
                 className="w-full p-3 border border-gray-700 rounded-lg bg-black/60 text-white focus:outline-none focus:border-gray-400"

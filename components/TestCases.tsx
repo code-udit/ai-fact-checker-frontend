@@ -18,16 +18,16 @@ const textCases = [
 ];
 
 const urlCases = [
-"https://en.wikipedia.org/wiki/Artificial_intelligence",
-"https://en.wikipedia.org/wiki/Global_warming",
-"https://www.britannica.com/science/climate-change",
-"https://www.healthline.com/nutrition/green-tea-benefits",
-"https://www.bbc.com/news/science-environment-56837908",
-"https://www.theguardian.com/technology/artificial-intelligence",
-"https://medium.com/@towardsdatascience/what-is-artificial-intelligence-why-it-matters-1c9b6f",
-"https://www.dailymail.co.uk/news/index.html",
-"https://www.webmd.com/diet/features/health-benefits-of-green-tea",
-"https://www.cnn.com/health"
+  "https://en.wikipedia.org/wiki/Artificial_intelligence",
+  "https://en.wikipedia.org/wiki/Global_warming",
+  "https://www.britannica.com/science/climate-change",
+  "https://www.bbc.com/news/science-environment-56837908",
+  "https://www.cnn.com/health",
+  "https://plato.stanford.edu/entries/artificial-intelligence/",
+  "https://www.medicalnewstoday.com/articles/269538",
+  "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+  "https://www.un.org/en/climatechange/what-is-climate-change",
+  "https://www.ibm.com/topics/artificial-intelligence"
 ];
 
 /* ---------------------- Component ---------------------- */
