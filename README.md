@@ -12,6 +12,19 @@ It provides:
 
 ---
 
+## 🔗 Links
+
+### 🌐 Live Demo
+https://ai-fact-checker-frontend.vercel.app/
+
+### 💻 Frontend Repository
+https://github.com/code-udit/ai-fact-checker-frontend.git
+
+### ⚙️ Backend Repository
+https://github.com/code-udit/ai-fact-checker-backend.git
+
+---
+
 🎯 Key Features
 
 - Text & URL Input
