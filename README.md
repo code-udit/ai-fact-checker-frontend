@@ -1,4 +1,8 @@
-🎨 AI Fact Checker Frontend
+# AI Fact Checker Frontend
+
+### 👨‍💻 Developed By
+
+**Udit U Gunagi**
 
 The AI Fact Checker frontend is a modern web application built to analyze text or URLs and determine whether the content is True, Misleading, or False.
 
@@ -145,6 +149,12 @@ Make sure the backend server is running before testing.
 - Save analysis history
 - Export reports (PDF)
 - Real-time news verification
+
+---
+
+## 👨‍💻 Author
+
+Developed by **Udit U Gunagi**
 
 ---
 
