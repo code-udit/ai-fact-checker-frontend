@@ -19,6 +19,7 @@ export default function Home() {
   const [result, setResult] = useState<ResultType | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [showWakeupMessage, setShowWakeupMessage] = useState(false);
 
   useEffect(() => {
     if (error) {
@@ -41,20 +42,35 @@ export default function Home() {
 
     setError(null);
 
+    let timer: NodeJS.Timeout | undefined;
+
     try {
       setLoading(true);
 
+      timer = setTimeout(() => {
+        setShowWakeupMessage(true);
+      }, 5000);
+
       const payload: { text?: string; url?: string } = {};
+
       if (trimmedText) payload.text = trimmedText;
       if (trimmedUrl) payload.url = trimmedUrl;
 
       const data = await analyzeContent(payload);
+
+      if (timer) clearTimeout(timer);
+      setShowWakeupMessage(false);
+
       setResult(data);
     } catch (err: unknown) {
+      if (timer) clearTimeout(timer);
+      setShowWakeupMessage(false);
+
       if (err instanceof Error) setError(err.message);
       else setError("Something went wrong");
     } finally {
       setLoading(false);
+      setShowWakeupMessage(false);
     }
   };
 
@@ -122,6 +138,22 @@ export default function Home() {
               >
                 {loading ? "Analyzing..." : "Analyze"}
               </button>
+              {showWakeupMessage && (
+                <div className="mt-4 rounded-lg border border-amber-500/30 bg-amber-500/10 p-4">
+                  <p className="font-medium text-amber-300">
+                    Connecting to server...
+                  </p>
+
+                  <p className="mt-1 text-sm text-amber-200">
+                    The backend is waking up after inactivity. This usually
+                    takes 10–20 seconds.
+                  </p>
+
+                  <p className="mt-1 text-sm text-amber-200">
+                    Thanks for your patience.
+                  </p>
+                </div>
+              )}
 
               <button
                 type="button"
